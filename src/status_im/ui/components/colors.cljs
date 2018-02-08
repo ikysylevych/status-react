@@ -13,3 +13,6 @@
 (def red "#ff2d55") ;; Used to highlight errors or "dangerous" actions
 (def light-gray "#eef2f5")  ;; Used as a background or shadow
 (def text-light-gray "#212121") ;; Used for labels (home items)
+
+(def chat-input-border "#e8eaeb")
+(def chat-input-grey "#99a0a6")
