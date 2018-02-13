@@ -14,8 +14,13 @@
 
 (defn init [app-root]
   (log/set-level! config/log-level)
+  (log/debug "[INIT] log/set-level!")
   (error-handler/register-exception-handler!)
+  (log/debug "[INIT] error-handler/register-exception-handler!")
   (status/init-jail)
+  (log/debug "[INIT] status/init-jail")
   (data-store/init)
+  (log/debug "[INIT] data-store/init")
   (.registerComponent react/app-registry "StatusIm" #(reagent/reactify-component app-root))
+  (log/debug "[INIT] .registerComponent")
   (re-frame/dispatch-sync [:initialize-app]))
